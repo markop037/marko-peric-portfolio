@@ -64,7 +64,7 @@ export default function Projects() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
             A selection of projects showcasing my skills in backend development,
             data analysis, and building user-friendly applications.
@@ -144,7 +144,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium text-sm group/link"
+                  className="mt-6 inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium text-sm group/link"
                   whileHover={{ x: 5 }}
                 >
                   View on GitHub

@@ -23,13 +23,13 @@ const skillCategories = [
     title: "Backend & APIs",
     icon: Server,
     skills: ["FastAPI", "RESTful APIs", "WebSockets", "AWS Lambda"],
-    color: "from-indigo-500 to-purple-500",
+    color: "from-blue-500 to-blue-600",
   },
   {
     title: "Cloud & DevOps",
     icon: Cloud,
     skills: ["Docker", "AWS", "GitHub", "Linux"],
-    color: "from-purple-500 to-pink-500",
+    color: "from-blue-500 to-pink-500",
   },
   {
     title: "Machine Learning & Data Analysis",
@@ -68,7 +68,7 @@ export default function Skills() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
             A comprehensive toolkit for building robust backend systems, automation tools,
             and data-driven applications.

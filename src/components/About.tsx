@@ -45,7 +45,7 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -68,7 +68,7 @@ export default function About() {
 
             <p className="text-gray-300 text-lg leading-relaxed">
               I completed a remote backend internship at{" "}
-              <span className="text-indigo-400 font-medium">ZenHire</span>, where I
+              <span className="text-blue-400 font-medium">ZenHire</span>, where I
               gained hands-on experience working on cloud-based backend systems using
               Python and AWS. I collaborated with a professional development team,
               building scalable services and real-time communication features.
@@ -76,7 +76,7 @@ export default function About() {
 
             <p className="text-gray-300 text-lg leading-relaxed">
               In parallel, I run my own project at{" "}
-              <span className="text-indigo-400 font-medium">Traders Market</span>, where
+              <span className="text-blue-400 font-medium">Traders Market</span>, where
               I develop and optimize automated trading systems (Expert Advisors) using
               C++ and MQL5. I focus on performance, reliability, and algorithmic
               efficiency, including backtesting, optimization, and integration with the
@@ -104,7 +104,7 @@ export default function About() {
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
                 className="glass rounded-xl p-6 card-hover"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <item.icon size={24} className="text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-1">{item.title}</h3>

@@ -11,9 +11,9 @@ export default function Hero() {
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slow delay-1000" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -57,7 +57,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg sm:text-xl text-indigo-400 font-medium mb-6"
+          className="text-lg sm:text-xl text-blue-400 font-medium mb-6"
         >
           Backend, Automation & Cloud-Oriented Development
         </motion.p>
@@ -82,7 +82,7 @@ export default function Hero() {
         >
           <motion.a
             href="#projects"
-            className="group w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg font-semibold text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300"
+            className="group w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -96,7 +96,7 @@ export default function Hero() {
             href="https://github.com/markop037"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-8 py-3.5 bg-dark-700 border border-dark-600 rounded-lg font-semibold text-white hover:bg-dark-600 hover:border-indigo-500/50 transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-3.5 bg-dark-700 border border-dark-600 rounded-lg font-semibold text-white hover:bg-dark-600 hover:border-blue-500/50 transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -109,7 +109,7 @@ export default function Hero() {
           <motion.a
             href="/cv.pdf"
             download
-            className="w-full sm:w-auto px-8 py-3.5 bg-dark-700 border border-dark-600 rounded-lg font-semibold text-white hover:bg-dark-600 hover:border-indigo-500/50 transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-3.5 bg-dark-700 border border-dark-600 rounded-lg font-semibold text-white hover:bg-dark-600 hover:border-blue-500/50 transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -118,26 +118,6 @@ export default function Hero() {
               Download CV
             </span>
           </motion.a>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-3 bg-indigo-500 rounded-full mt-2"
-            />
-          </motion.div>
         </motion.div>
       </div>
     </section>

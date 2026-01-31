@@ -16,9 +16,9 @@ const config: Config = {
           600: "#242430",
         },
         accent: {
-          primary: "#6366f1",
-          secondary: "#8b5cf6",
-          gradient: "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
+          primary: "#3b82f6",
+          secondary: "#2563eb",
+          gradient: "linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)",
         },
       },
       fontFamily: {

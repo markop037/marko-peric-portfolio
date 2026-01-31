@@ -20,8 +20,8 @@ export default function GitHub() {
         >
           {/* Background decoration */}
           <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,#6366f1_0%,transparent_50%)]" />
-            <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,#8b5cf6_0%,transparent_50%)]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,#3b82f6_0%,transparent_50%)]" />
+            <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,#2563eb_0%,transparent_50%)]" />
           </div>
 
           <div className="relative z-10">
@@ -30,7 +30,7 @@ export default function GitHub() {
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
-              className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-indigo-500/25"
+              className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/25"
             >
               <Github size={40} className="text-white" />
             </motion.div>
@@ -64,11 +64,11 @@ export default function GitHub() {
               className="flex flex-wrap justify-center gap-6 mb-8"
             >
               <div className="flex items-center gap-2 text-gray-400">
-                <Code size={18} className="text-indigo-400" />
+                <Code size={18} className="text-blue-400" />
                 <span>Open Source Projects</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
-                <GitBranch size={18} className="text-purple-400" />
+                <GitBranch size={18} className="text-blue-400" />
                 <span>Active Contributions</span>
               </div>
               <div className="flex items-center gap-2 text-gray-400">
@@ -85,7 +85,7 @@ export default function GitHub() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl font-semibold text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

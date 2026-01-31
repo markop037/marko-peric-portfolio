@@ -41,23 +41,23 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6366f1;
+  background: #3b82f6;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #8b5cf6;
+  background: #3b82f6;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(59, 130, 246, 0.3);
   color: #fff;
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -65,25 +65,25 @@ body {
 
 /* Glow effects */
 .glow {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .glow-hover:hover {
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
 }
 
 /* Glass morphism */
 .glass {
   background: rgba(26, 26, 37, 0.7);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.1);
 }
 
 /* Animated gradient border */
 .gradient-border {
   position: relative;
   background: linear-gradient(#12121a, #12121a) padding-box,
-              linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7) border-box;
+              linear-gradient(135deg, #3b82f6, #2563eb, #1d4ed8) border-box;
   border: 2px solid transparent;
 }
 
@@ -95,8 +95,8 @@ section {
 /* Subtle grid background */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -145,7 +145,7 @@ section {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
   transition: width 0.3s ease;
 }
 
@@ -169,7 +169,7 @@ section {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+  background: linear-gradient(to bottom, #3b82f6, #2563eb);
 }
 
 .timeline-dot {
@@ -178,6 +178,6 @@ section {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #3b82f6;
   border: 2px solid #12121a;
 }

@@ -24,6 +24,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -64,7 +68,7 @@ export default function Header() {
             <motion.a
               href="/cv.pdf"
               download
-              className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg text-sm font-medium text-white hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 btn-hover"
+              className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-sm font-medium text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 btn-hover"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -87,36 +91,31 @@ export default function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="md:hidden bg-dark-800/95 backdrop-blur-md border-b border-dark-600/50"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="md:hidden bg-dark-800/95 backdrop-blur-md border-b border-dark-600/50 overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-4 py-4 space-y-1">
               {navLinks.map((link, index) => (
-                <motion.a
+                <a
                   key={link.name}
                   href={link.href}
-                  className="block py-2 text-gray-300 hover:text-white transition-colors duration-200"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-3 px-3 text-gray-300 hover:text-white hover:bg-dark-700/50 rounded-lg transition-all duration-200 text-base font-medium"
+                  onClick={handleMobileLinkClick}
                 >
                   {link.name}
-                </motion.a>
+                </a>
               ))}
-              <motion.a
+              <a
                 href="/cv.pdf"
                 download
-                className="block w-full text-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg text-sm font-medium text-white mt-4"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 }}
+                className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-base font-medium text-white mt-3 hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
+                onClick={handleMobileLinkClick}
               >
                 Download CV
-              </motion.a>
+              </a>
             </div>
           </motion.div>
         )}
