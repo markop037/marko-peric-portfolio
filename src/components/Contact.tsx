@@ -2,23 +2,27 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { useRef, useState } from "react";
+import { Mail, Linkedin, Github, Send, Check, Copy } from "lucide-react";
+import ContactFormModal from "./ContactFormModal";
+
+const EMAIL_ADDRESS = "marko.peric2102@gmail.com";
 
 const contactLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:pericmarko037@gmail.com",
-    value: "pericmarko037@gmail.com",
+    value: EMAIL_ADDRESS,
     color: "from-red-500 to-orange-500",
+    isEmail: true,
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/marko-peric-profile",
+    href: "https://www.linkedin.com/in/marko-perić-23893b316/",
     value: "Connect on LinkedIn",
     color: "from-blue-500 to-cyan-500",
+    isEmail: false,
   },
   {
     name: "GitHub",
@@ -26,12 +30,25 @@ const contactLinks = [
     href: "https://github.com/markop037",
     value: "github.com/markop037",
     color: "from-gray-600 to-gray-800",
+    isEmail: false,
   },
 ];
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL_ADDRESS);
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy email:", err);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 sm:py-32 relative bg-dark-800/30" ref={ref}>
@@ -55,27 +72,64 @@ export default function Contact() {
 
         {/* Contact Cards */}
         <div className="grid sm:grid-cols-3 gap-6">
-          {contactLinks.map((contact, index) => (
-            <motion.a
-              key={contact.name}
-              href={contact.href}
-              target={contact.name !== "Email" ? "_blank" : undefined}
-              rel={contact.name !== "Email" ? "noopener noreferrer" : undefined}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass rounded-2xl p-6 text-center card-hover group"
-              whileHover={{ scale: 1.02 }}
-            >
-              <div
-                className={`w-14 h-14 bg-gradient-to-br ${contact.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+          {contactLinks.map((contact, index) =>
+            contact.isEmail ? (
+              // Email card with copy functionality
+              <motion.div
+                key={contact.name}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass rounded-2xl p-6 text-center card-hover group relative cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                onClick={handleCopyEmail}
               >
-                <contact.icon size={24} className="text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">{contact.name}</h3>
-              <p className="text-gray-400 text-sm break-all">{contact.value}</p>
-            </motion.a>
-          ))}
+                <div
+                  className={`w-14 h-14 bg-gradient-to-br ${contact.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <contact.icon size={24} className="text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">{contact.name}</h3>
+                <p className="text-gray-400 text-sm break-all mb-3">{contact.value}</p>
+                
+                {/* Copy Button */}
+                <div className="flex items-center justify-center gap-2 text-xs text-blue-400 font-medium">
+                  {copiedEmail ? (
+                    <>
+                      <Check size={14} />
+                      <span>Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={14} />
+                      <span>Click to copy</span>
+                    </>
+                  )}
+                </div>
+              </motion.div>
+            ) : (
+              // Regular link cards for LinkedIn and GitHub
+              <motion.a
+                key={contact.name}
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass rounded-2xl p-6 text-center card-hover group"
+                whileHover={{ scale: 1.02 }}
+              >
+                <div
+                  className={`w-14 h-14 bg-gradient-to-br ${contact.color} rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <contact.icon size={24} className="text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">{contact.name}</h3>
+                <p className="text-gray-400 text-sm break-all">{contact.value}</p>
+              </motion.a>
+            )
+          )}
         </div>
 
         {/* Additional CTA */}
@@ -88,16 +142,19 @@ export default function Contact() {
           <p className="text-gray-400 mb-6">
             Prefer to send a direct message?
           </p>
-          <motion.a
-            href="mailto:pericmarko037@gmail.com"
+          <motion.button
+            onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl font-semibold text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Send size={20} />
             Send Email
-          </motion.a>
+          </motion.button>
         </motion.div>
+
+        {/* Contact Form Modal */}
+        <ContactFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </section>
   );

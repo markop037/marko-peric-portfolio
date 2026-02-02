@@ -66,7 +66,7 @@ export default function Header() {
               </motion.a>
             ))}
             <motion.a
-              href="/cv.pdf"
+              href="/Marko_Perić_CV.pdf"
               download
               className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-sm font-medium text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 btn-hover"
               whileHover={{ scale: 1.05 }}
@@ -109,7 +109,7 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="/cv.pdf"
+                href="/Marko_Perić_CV.pdf"
                 download
                 className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-base font-medium text-white mt-3 hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
                 onClick={handleMobileLinkClick}
