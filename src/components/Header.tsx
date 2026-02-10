@@ -44,7 +44,7 @@ export default function Header() {
           {/* Logo */}
           <motion.a
             href="#"
-            className="text-xl sm:text-2xl font-bold gradient-text"
+            className="text-2xl sm:text-3xl logo-text tracking-tight"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

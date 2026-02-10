@@ -51,7 +51,7 @@ export default function Footer() {
             viewport={{ once: true }}
             className="text-center md:text-left"
           >
-            <a href="#" className="text-2xl font-bold gradient-text">
+            <a href="#" className="text-3xl logo-text tracking-tight">
               MP
             </a>
             <p className="text-gray-500 text-sm mt-1">Software Developer</p>
