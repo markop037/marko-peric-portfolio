@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 
 const EMAIL_ADDRESS = "marko.peric2102@gmail.com";
@@ -116,8 +116,7 @@ export default function Footer() {
             className="text-center md:text-right"
           >
             <p className="text-gray-500 text-sm flex items-center gap-1 justify-center md:justify-end">
-              © {currentYear} Marko Perić. Built with
-              <Heart size={14} className="text-red-500 inline" />
+              © 2026 Marko Perić
             </p>
           </motion.div>
         </div>

@@ -59,7 +59,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-lg sm:text-xl text-blue-400 font-medium mb-6"
         >
-          Backend, Automation & Cloud-Oriented Development
+          Backend Development, Automation & Cloud Technologies
         </motion.p>
 
         {/* Short intro */}
@@ -69,8 +69,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I build scalable backend systems, automation tools, and data-driven applications
-          using Python, C++, and modern cloud technologies.
+          I design and develop backend services, automation solutions, and data-driven applications
+          using Python, C++, cloud technologies, and modern APIs.
         </motion.p>
 
         {/* CTA Buttons */}

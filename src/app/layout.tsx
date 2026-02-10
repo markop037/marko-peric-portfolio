@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Marko Perić | Software Developer",
   description:
-    "Backend, Automation & Cloud-Oriented Development. I build scalable backend systems, automation tools, and data-driven applications using Python, C++, and modern cloud technologies.",
+    "Backend Development, Automation & Cloud Technologies. I design and develop backend services, automation solutions, and data-driven applications using Python, C++, cloud technologies, and modern APIs.",
   keywords: [
     "Software Developer",
     "Backend Developer",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marko Perić | Software Developer",
     description:
-      "Backend, Automation & Cloud-Oriented Development. Building scalable systems with Python, C++, and cloud technologies.",
+      "Backend Development, Automation & Cloud Technologies. Building backend services and automation with Python, C++, cloud technologies, and modern APIs.",
     type: "website",
     locale: "en_US",
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Marko Perić | Software Developer",
     description:
-      "Backend, Automation & Cloud-Oriented Development. Building scalable systems with Python, C++, and cloud technologies.",
+      "Backend Development, Automation & Cloud Technologies. Building backend services and automation with Python, C++, cloud technologies, and modern APIs.",
   },
   robots: {
     index: true,

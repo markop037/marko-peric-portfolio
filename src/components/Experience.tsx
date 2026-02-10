@@ -11,12 +11,12 @@ const experiences = [
     company: "Traders Market",
     type: "Freelance, Remote",
     period: "June 2025 – Present",
-    website: "https://www.tradersmarket.io",
+    website: "https://www.tradersmarket.io/",
     responsibilities: [
-      "Developed automated trading systems (Expert Advisors) using C++ and MQL5",
-      "Performed strategy development, backtesting, and optimization",
-      "Integrated Supabase for license management and client deployment",
-      "Delivered custom solutions and provided ongoing technical support",
+      "Developing and optimizing automated trading systems (Expert Advisors) for MetaTrader 5 using C++ and MQL5",
+      "Conducting strategy design, backtesting, and performance optimization for algorithmic trading",
+      "Integrating trading systems with full platform functionality for reliability and efficiency",
+      "Managing deployment, client access, and ongoing technical support",
     ],
     current: true,
   },
@@ -54,6 +54,9 @@ export default function Experience() {
             Work <span className="gradient-text">Experience</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+            This is a timeline of my work experience. For each role, it shows when I worked there, what kind of work it was, and the main tasks I did.
+          </p>
         </motion.div>
 
         {/* Timeline */}
@@ -88,17 +91,19 @@ export default function Experience() {
                   <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="text-blue-400 font-semibold">{exp.company}</span>
-                        {exp.website && (
+                      <div className="flex flex-wrap items-center gap-2 mt-1">
+                        {exp.website ? (
                           <a
                             href={exp.website}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-gray-500 hover:text-blue-400 transition-colors"
+                            className="inline-flex items-center gap-1.5 text-blue-400 font-semibold hover:text-blue-300 underline underline-offset-2 transition-colors"
                           >
-                            <ExternalLink size={14} />
+                            {exp.company}
+                            <ExternalLink size={14} className="flex-shrink-0" />
                           </a>
+                        ) : (
+                          <span className="text-blue-400 font-semibold">{exp.company}</span>
                         )}
                       </div>
                     </div>

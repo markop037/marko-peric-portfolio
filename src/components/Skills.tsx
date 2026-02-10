@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
   Code2,
+  Layout,
   Server,
   Cloud,
   Brain,
@@ -16,19 +17,31 @@ const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code2,
-    skills: ["Python", "C++", "SQL", "MQL5"],
+    skills: ["C++", "Python", "SQL", "TypeScript / JavaScript", "MQL5"],
     color: "from-blue-500 to-cyan-500",
+  },
+  {
+    title: "Frontend",
+    icon: Layout,
+    skills: ["React", "Next.js"],
+    color: "from-violet-500 to-purple-500",
   },
   {
     title: "Backend & APIs",
     icon: Server,
-    skills: ["FastAPI", "RESTful APIs", "WebSockets", "AWS Lambda"],
+    skills: ["Next.js", "FastAPI", "RESTful APIs", "WebSockets"],
     color: "from-blue-500 to-blue-600",
+  },
+  {
+    title: "Databases",
+    icon: Database,
+    skills: ["SQL Server", "MySQL", "MongoDB", "Supabase"],
+    color: "from-orange-500 to-amber-500",
   },
   {
     title: "Cloud & DevOps",
     icon: Cloud,
-    skills: ["Docker", "AWS", "GitHub", "Linux"],
+    skills: ["Docker", "Git / GitHub", "AWS", "Firebase"],
     color: "from-blue-500 to-pink-500",
   },
   {
@@ -38,15 +51,9 @@ const skillCategories = [
     color: "from-green-500 to-emerald-500",
   },
   {
-    title: "Databases",
-    icon: Database,
-    skills: ["SQL Server", "MySQL", "MongoDB", "Supabase"],
-    color: "from-orange-500 to-amber-500",
-  },
-  {
     title: "Testing & Automation",
     icon: TestTube,
-    skills: ["PyTest", "Unit Testing", "Selenium", "BeautifulSoup"],
+    skills: ["PyTest", "Selenium", "BeautifulSoup"],
     color: "from-red-500 to-rose-500",
   },
 ];
@@ -70,8 +77,7 @@ export default function Skills() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            A comprehensive toolkit for building robust backend systems, automation tools,
-            and data-driven applications.
+            This is a list of programming languages, frameworks, and tools I use. It shows what I’ve worked with for backend and frontend development, cloud and DevOps, databases, and data or testing projects.
           </p>
         </motion.div>
 

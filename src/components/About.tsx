@@ -18,12 +18,12 @@ export default function About() {
     {
       icon: Briefcase,
       title: "Experience",
-      text: "Backend Internship & Freelance Development",
+      text: "Backend Developer (Python / AWS) – ZenHire & C++ & MQL5 Developer – Traders Market",
     },
     {
       icon: Code,
       title: "Focus",
-      text: "Python, C++, Cloud Technologies",
+      text: "Python, C++, Cloud & APIs",
     },
     {
       icon: Lightbulb,
@@ -46,6 +46,9 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
+          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+            This is a short summary of my education, work experience, and what I am doing now. It shows where I learned my skills and the kind of projects I am currently working on.
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -69,23 +72,25 @@ export default function About() {
             <p className="text-gray-300 text-lg leading-relaxed">
               I completed a remote backend internship at{" "}
               <span className="text-blue-400 font-medium">ZenHire</span>, where I
-              gained hands-on experience working on cloud-based backend systems using
-              Python and AWS. I collaborated with a professional development team,
-              building scalable services and real-time communication features.
+              worked on cloud-based backend systems using Python and AWS. I was part of
+              a development team, helping build scalable services and real-time
+              features. During the internship, I gained experience with Git-based
+              workflows, writing clean and maintainable code, and learning how backend
+              services are developed, tested, and prepared for production.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              In parallel, I run my own project at{" "}
+              I am currently running my own project,{" "}
               <span className="text-blue-400 font-medium">Traders Market</span>, where
-              I develop and optimize automated trading systems (Expert Advisors) using
-              C++ and MQL5. I focus on performance, reliability, and algorithmic
-              efficiency, including backtesting, optimization, and integration with the
-              MetaTrader 5 platform.
+              I develop and optimize automated trading systems (Expert Advisors) for
+              the MetaTrader 5 platform using C++ and MQL5. I focus on performance, reliability, and
+              algorithmic efficiency, including backtesting, optimization, and full
+              integration with the platform.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              I enjoy learning new technologies, solving complex problems, and working
-              in collaborative team environments.
+              I enjoy learning new technologies, solving challenging problems, and
+              working with others to come up with solutions.
             </p>
           </motion.div>
 

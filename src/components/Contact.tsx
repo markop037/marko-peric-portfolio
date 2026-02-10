@@ -28,7 +28,7 @@ const contactLinks = [
     name: "GitHub",
     icon: Github,
     href: "https://github.com/markop037",
-    value: "github.com/markop037",
+    value: "Check out my projects",
     color: "from-gray-600 to-gray-800",
     isEmail: false,
   },
@@ -65,8 +65,7 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-xl mx-auto">
-            I&apos;m currently open to new opportunities. Whether you have a question,
-            a project idea, or just want to say hi, feel free to reach out!
+            Ways to get in touch: email address (with copy), links to LinkedIn and GitHub, and a form to send a message directly from the site.
           </p>
         </motion.div>
 
