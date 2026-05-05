@@ -2,14 +2,18 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { GraduationCap, Briefcase, Code } from "lucide-react";
 
 export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const highlights = [
+  type HighlightItem =
+    | { icon: React.ElementType; title: string; text: string }
+    | { icon: React.ElementType; title: string; lines: string[] };
+
+  const highlights: HighlightItem[] = [
     {
       icon: GraduationCap,
       title: "Education",
