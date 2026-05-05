@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
@@ -23,19 +23,19 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: Layout,
-    skills: ["React", "Next.js"],
+    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "React Query"],
     color: "from-violet-500 to-purple-500",
   },
   {
     title: "Backend & APIs",
     icon: Server,
-    skills: ["Next.js", "FastAPI", "RESTful APIs", "WebSockets"],
+    skills: ["Next.js", "FastAPI", "RESTful APIs", "WebSockets", "SQLAlchemy"],
     color: "from-blue-500 to-blue-600",
   },
   {
     title: "Databases",
     icon: Database,
-    skills: ["SQL Server", "MySQL", "MongoDB", "Supabase"],
+    skills: ["SQL Server", "MySQL", "PostgreSQL", "MongoDB", "Supabase"],
     color: "from-orange-500 to-amber-500",
   },
   {
@@ -53,7 +53,7 @@ const skillCategories = [
   {
     title: "Testing & Automation",
     icon: TestTube,
-    skills: ["PyTest", "Selenium", "BeautifulSoup"],
+    skills: ["Selenium", "BeautifulSoup"],
     color: "from-red-500 to-rose-500",
   },
 ];
@@ -77,7 +77,7 @@ export default function Skills() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            This is a list of programming languages, frameworks, and tools I use. It shows what I’ve worked with for backend and frontend development, cloud and DevOps, databases, and data or testing projects.
+            Here are the languages, frameworks, and tools I've picked up through my projects and jobs — covering backend and frontend development, databases, cloud, and a bit of data analysis.
           </p>
         </motion.div>
 
@@ -125,3 +125,4 @@ export default function Skills() {
     </section>
   );
 }
+

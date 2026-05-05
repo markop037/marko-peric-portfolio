@@ -107,8 +107,9 @@ export default function Hero() {
           </motion.a>
 
           <motion.a
-            href="/Marko_Perić_CV.pdf"
-            download
+            href="https://pub-9b941bfb85af4d2a814cc07bf6d08617.r2.dev/Marko_Peri%C4%87_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3.5 bg-dark-700 border border-dark-600 rounded-lg font-semibold text-white hover:bg-dark-600 hover:border-blue-500/50 transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}

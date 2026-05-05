@@ -66,8 +66,9 @@ export default function Header() {
               </motion.a>
             ))}
             <motion.a
-              href="/Marko_Perić_CV.pdf"
-              download
+              href="https://pub-9b941bfb85af4d2a814cc07bf6d08617.r2.dev/Marko_Peri%C4%87_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-sm font-medium text-white hover:from-blue-600 hover:to-blue-700 transition-all duration-300 btn-hover"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -109,8 +110,9 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="/Marko_Perić_CV.pdf"
-                download
+                href="https://pub-9b941bfb85af4d2a814cc07bf6d08617.r2.dev/Marko_Peri%C4%87_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-base font-medium text-white mt-3 hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
                 onClick={handleMobileLinkClick}
               >

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, Briefcase, Code, Lightbulb } from "lucide-react";
+import { GraduationCap, Briefcase, Code } from "lucide-react";
 
 export default function About() {
   const ref = useRef(null);
@@ -16,19 +16,14 @@ export default function About() {
       text: "School of Electrical and Computer Engineering, Belgrade",
     },
     {
-      icon: Briefcase,
-      title: "Experience",
-      text: "Backend Developer (Python / AWS) – ZenHire & C++ & MQL5 Developer – Traders Market",
-    },
-    {
       icon: Code,
       title: "Focus",
       text: "Python, C++, Cloud & APIs",
     },
     {
-      icon: Lightbulb,
-      title: "Passion",
-      text: "Problem Solving & Continuous Learning",
+      icon: Briefcase,
+      title: "Experience",
+      lines: ["Backend Dev (Python / AWS)", "ZenHire", "C++ & MQL5 Dev", "Traders Market"],
     },
   ];
 
@@ -47,7 +42,7 @@ export default function About() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            This is a short summary of my education, work experience, and what I am doing now. It shows where I learned my skills and the kind of projects I am currently working on.
+            A quick overview of my background — where I studied, what I&apos;ve worked on so far, and what I&apos;m currently focused on.
           </p>
         </motion.div>
 
@@ -60,37 +55,35 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-gray-300 text-lg leading-relaxed">
-              I recently completed my studies at the{" "}
+              I just finished my studies at the{" "}
               <span className="text-white font-medium">
                 School of Electrical and Computer Engineering in Belgrade
               </span>
-              , specializing in New Computer Technologies. During my studies, I mainly
-              worked with Python and C++, building a strong foundation in software
-              development, problem-solving, and system design.
+              , where I focused on New Computer Technologies. Most of what I learned
+              was through Python and C++, and along the way I picked up a decent
+              understanding of how software gets built and how to approach problems.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              I completed a remote backend internship at{" "}
-              <span className="text-blue-400 font-medium">ZenHire</span>, where I
-              worked on cloud-based backend systems using Python and AWS. I was part of
-              a development team, helping build scalable services and real-time
-              features. During the internship, I gained experience with Git-based
-              workflows, writing clean and maintainable code, and learning how backend
-              services are developed, tested, and prepared for production.
+              I also did a remote backend internship at{" "}
+              <span className="text-blue-400 font-medium">ZenHire</span>, which was
+              pretty cool. I got to work on real backend stuff — Python, AWS, building
+              out some services and real-time features as part of a small team. It was
+              a good way to see how things actually work outside of school projects,
+              from writing proper code to getting it ready for production.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              I am currently running my own project,{" "}
+              Right now I&apos;m working on my own thing called{" "}
               <span className="text-blue-400 font-medium">Traders Market</span>, where
-              I develop and optimize automated trading systems (Expert Advisors) for
-              the MetaTrader 5 platform using C++ and MQL5. I focus on performance, reliability, and
-              algorithmic efficiency, including backtesting, optimization, and full
-              integration with the platform.
+              I build automated trading bots for MetaTrader 5 using C++ and MQL5. It&apos;s
+              basically writing algorithms that trade on their own — I handle everything
+              from the logic to backtesting and making sure it all runs reliably.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              I enjoy learning new technologies, solving challenging problems, and
-              working with others to come up with solutions.
+              I like picking up new things, figuring out tricky problems, and building
+              stuff that actually works.
             </p>
           </motion.div>
 
@@ -107,13 +100,28 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="glass rounded-xl p-6 card-hover"
+                className={`glass rounded-xl p-6 card-hover${"lines" in item ? " col-span-2" : ""}`}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <item.icon size={24} className="text-white" />
                 </div>
-                <h3 className="text-white font-semibold mb-1">{item.title}</h3>
-                <p className="text-gray-400 text-sm">{item.text}</p>
+                <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                {"lines" in item ? (
+                  <div className="flex flex-wrap gap-x-6 gap-y-1">
+                    <span className="text-gray-400 text-sm">
+                      <span className="text-gray-300">{item.lines[0]}</span>
+                      {" · "}
+                      <span className="text-blue-400">{item.lines[1]}</span>
+                    </span>
+                    <span className="text-gray-400 text-sm">
+                      <span className="text-gray-300">{item.lines[2]}</span>
+                      {" · "}
+                      <span className="text-blue-400">{item.lines[3]}</span>
+                    </span>
+                  </div>
+                ) : (
+                  <p className="text-gray-400 text-sm">{item.text}</p>
+                )}
               </motion.div>
             ))}
           </motion.div>

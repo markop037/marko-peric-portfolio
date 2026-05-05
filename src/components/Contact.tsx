@@ -65,7 +65,7 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-xl mx-auto">
-            Ways to get in touch: email address (with copy), links to LinkedIn and GitHub, and a form to send a message directly from the site.
+            Whether you have a question, an opportunity, or just want to say hello — feel free to reach out through any of the options below.
           </p>
         </motion.div>
 

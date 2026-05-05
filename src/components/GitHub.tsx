@@ -52,7 +52,7 @@ export default function GitHub() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-gray-400 text-lg mb-8 max-w-xl mx-auto"
             >
-              A direct link to the GitHub profile. From there you can browse public repositories, view source code, and see ongoing or past work.
+              Feel free to browse my public repositories, check out the source code, and see what I&apos;ve been working on.
             </motion.p>
 
             {/* Stats/Features */}
