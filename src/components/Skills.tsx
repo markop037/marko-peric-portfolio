@@ -77,7 +77,7 @@ export default function Skills() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Here are the languages, frameworks, and tools I&apos;ve picked up through my projects and jobs — covering backend and frontend development, databases, cloud, and a bit of data analysis.
+            Here are the languages, frameworks, and tools I&apos;ve picked up through my projects and jobs - covering backend and frontend development, databases, cloud, and a bit of data analysis.
           </p>
         </motion.div>
 

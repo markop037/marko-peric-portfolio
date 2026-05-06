@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, ExternalLink, Lock } from "lucide-react";
 
 const experiences = [
   {
@@ -32,6 +32,21 @@ const experiences = [
       "Handled cloud-based data storage and retrieval",
       "Worked as part of a small development team and got used to a real codebase",
     ],
+    current: false,
+  },
+  {
+    title: "Game Developer (C++ / Unreal Engine 5)",
+    company: "Independent Collaboration",
+    type: "Remote",
+    period: "October 2024 – December 2024",
+    website: null,
+    responsibilities: [
+      "Developed gameplay systems using C++ and Unreal Engine Blueprints in Unreal Engine 5",
+      "Debugged and fixed issues across the game",
+      "Collaborated with team members working on characters and animations",
+      "Integrated and adjusted assets to fit gameplay and technical requirements",
+    ],
+    note: "Project is currently not publicly available.",
     current: false,
   },
 ];
@@ -135,6 +150,14 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Private project note */}
+                  {exp.note && (
+                    <div className="mt-4 pt-3 border-t border-white/10 flex items-center gap-2 text-xs text-gray-500 italic">
+                      <Lock size={11} className="flex-shrink-0 text-gray-600" />
+                      <span>{exp.note}</span>
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </motion.div>

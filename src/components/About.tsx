@@ -46,7 +46,7 @@ export default function About() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            A quick overview of my background — where I studied, what I&apos;ve worked on so far, and what I&apos;m currently focused on.
+            A quick overview of my background - where I studied, what I&apos;ve worked on so far, and what I&apos;m currently focused on.
           </p>
         </motion.div>
 
@@ -71,7 +71,7 @@ export default function About() {
             <p className="text-gray-300 text-lg leading-relaxed">
               I also did a remote backend internship at{" "}
               <span className="text-blue-400 font-medium">ZenHire</span>, which was
-              pretty cool. I got to work on real backend stuff — Python, AWS, building
+              pretty cool. I got to work on real backend stuff - Python, AWS, building
               out some services and real-time features as part of a small team. It was
               a good way to see how things actually work outside of school projects,
               from writing proper code to getting it ready for production.
@@ -81,7 +81,7 @@ export default function About() {
               Right now I&apos;m working on my own thing called{" "}
               <span className="text-blue-400 font-medium">Traders Market</span>, where
               I build automated trading bots for MetaTrader 5 using C++ and MQL5. It&apos;s
-              basically writing algorithms that trade on their own — I handle everything
+              basically writing algorithms that trade on their own - I handle everything
               from the logic to backtesting and making sure it all runs reliably.
             </p>
 
