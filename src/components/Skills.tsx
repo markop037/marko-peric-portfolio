@@ -23,13 +23,13 @@ const skillCategories = [
   {
     title: "Frontend",
     icon: Layout,
-    skills: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "React Query"],
+    skills: ["React", "Tailwind CSS", "Framer Motion", "React Query"],
     color: "from-violet-500 to-purple-500",
   },
   {
     title: "Backend & APIs",
     icon: Server,
-    skills: ["Next.js", "FastAPI", "RESTful APIs", "WebSockets", "SQLAlchemy"],
+    skills: ["Next.js", "FastAPI", "RESTful APIs", "WebSockets"],
     color: "from-blue-500 to-blue-600",
   },
   {
@@ -53,7 +53,7 @@ const skillCategories = [
   {
     title: "Testing & Automation",
     icon: TestTube,
-    skills: ["Selenium", "BeautifulSoup"],
+    skills: ["PyTes", "Selenium", "BeautifulSoup"],
     color: "from-red-500 to-rose-500",
   },
 ];

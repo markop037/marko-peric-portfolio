@@ -10,7 +10,7 @@ const experiences = [
     title: "C++ & MQL5 Developer",
     company: "Traders Market",
     type: "Freelance, Remote",
-    period: "June 2025 – Present",
+    period: "June 2025 - Present",
     website: "https://www.tradersmarket.io/",
     responsibilities: [
       "Building and improving automated trading bots (Expert Advisors) for MetaTrader 5 using C++ and MQL5",
@@ -24,7 +24,7 @@ const experiences = [
     title: "Backend Developer Intern (Python / AWS)",
     company: "ZenHire",
     type: "Internship, Remote",
-    period: "February 2025 – May 2025",
+    period: "February 2025 - May 2025",
     website: null,
     responsibilities: [
       "Helped build backend services using Python and AWS Lambda",
@@ -38,7 +38,7 @@ const experiences = [
     title: "Game Developer (C++ / Unreal Engine 5)",
     company: "Independent Collaboration",
     type: "Remote",
-    period: "October 2024 – December 2024",
+    period: "October 2024 - December 2024",
     website: null,
     responsibilities: [
       "Developed gameplay systems using C++ and Unreal Engine Blueprints in Unreal Engine 5",
